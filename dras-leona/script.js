@@ -7,7 +7,7 @@ packageTrackerApp.controller('MainController', ['NgTableParams', '$http', functi
     //         var data = response.data.parcels;
     //     });
 
-    var data = [{
+    self.parcels = [{
         "name": "Airwick Aroma Oil",
         "image": "http:\/\/n2.sdlcdn.com\/imgs\/a\/r\/o\/Airwick-Aroma-Oil-Refill-Pack-SDL286969364-12-2ac2e.jpg",
         "date": "1440937805",
@@ -174,13 +174,15 @@ packageTrackerApp.controller('MainController', ['NgTableParams', '$http', functi
         }
     }];
 
+ 
+
     self.showMap = function(locations) {
         var latlng = new google.maps.LatLng(locations.latitude, locations.longitude),
             image = 'http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png';
 
         var mapOptions = {
             zoom: 12,
-            center: new google.maps.LatLng(locations.latitude, locations.longitude),
+            center: new google.maps.LatLng(locations.latitude+0.05, locations.longitude-0.09),
             mapTypeId: google.maps.MapTypeId.TERRAIN
         }
 
@@ -193,26 +195,4 @@ packageTrackerApp.controller('MainController', ['NgTableParams', '$http', functi
         });
     }
 
-    self.tableParams = new NgTableParams({}, {
-        filterOptions: { filterComparator: applyComparer },
-        dataset: data
-    });
-
-    self.comparers = [
-        // { name: "Starts with", fn: compareAsStrings(_.startsWith) },
-        // { name: "Ends with", fn: compareAsStrings(_.endsWith) },
-        { name: "Equals", fn: angular.equals },
-        // { name: "Contains", fn: compareAsStrings(_.includes) }
-    ];
-    self.comparer = self.comparers[0];
-
-    function applyComparer(actual, expected) {
-        return self.comparer.fn(actual, expected);
-    }
-
-    function compareAsStrings(fn) {
-        return function(actual, expected) {
-            return fn("" + actual, "" + expected);
-        };
-    }
 }]);

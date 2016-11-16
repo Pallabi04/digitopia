@@ -7,26 +7,28 @@
 }
 
 .map-style{
-	width: 400px; 
-	height: 200px;
+    width: 100%;
+    height: 250px;
 }
 
 .main-container {
-    margin: 0 auto;
-    width: 85%;
+    width: 100%;
     padding: 25px;
     background-color: #F49602;
     color: #FFFFFF;
     position: relative;
-     background-image: url("header-bg.png");
-     background-repeat: no-repeat;
-
-    }
+    background-image: url("header-bg.png");
+    background-repeat: no-repeat;
+}
 
 .container {
     background-color: #FFFFFF;
     border-radius: 20px;
-    }
+}
+
+.parcel-content {
+    padding: 20px 0;
+}
 
 .image-class {
   	height: 140px;
@@ -52,5 +54,18 @@
     width: 308px;
     margin-top: -109px;
     margin-right: 169px;
+}
 
+.panel-heading {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.panel-footer .label {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.panel-footer .glyphicon {
+    display: inline;
 }
