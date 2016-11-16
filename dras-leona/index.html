@@ -8,7 +8,7 @@
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.0-rc.0/angular.js"></script>
-<!-- <link rel="stylesheet" ; href="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.css"> -->
+<link rel="stylesheet" ; href="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -19,11 +19,14 @@
         <div class="row">
             <div ng-controller="MainController as vm">
                 <table ng-table="vm.tableParams" class="table" show-filter="true">
-                    <tr ng-repeat="user in $data" class="col-md-3">
+                    <tr ng-repeat="parcel in $data" class="col-md-3">
                         <td title="'Name'" filter="{ name: 'text'}" sortable="'name'">
                             <div class="panel panel-info">
-                                <div class="panel-heading">{{user.name}}</div>
-                                <div class="panel-body">Panel Content</div>
+                                <div class="panel-heading">{{parcel.name}}</div>
+                                <div class="panel-body">
+                                    <img ng-src="{{parcel.image}}" width="100%" height="100%">
+                                </div>
+                                <div class="panel-footer">{{parcel.name}}</div>
                             </div>
                         </td>
                     </tr>
