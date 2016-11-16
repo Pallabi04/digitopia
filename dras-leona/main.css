@@ -10,3 +10,47 @@
 	width: 400px; 
 	height: 200px;
 }
+
+.main-container {
+    margin: 0 auto;
+    width: 85%;
+    padding: 25px;
+    background-color: #F49602;
+    color: #FFFFFF;
+    position: relative;
+     background-image: url("header-bg.png");
+     background-repeat: no-repeat;
+
+    }
+
+.container {
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    }
+
+.image-class {
+  	height: 140px;
+    width: 160px;
+    border-radius: 100px;
+    margin-left: 200px;
+    margin-bottom: -5px;
+    border: 3px solid #D7D7D7;
+    z-index: -1;
+    background-image: url("header-bg.png");
+}
+.header-text{
+	
+	font-size: 50px;
+    margin-bottom: -100px;
+    margin-left: 430px;
+    padding: 10px;
+   
+}
+.image-class-right{
+	float: right;
+    height: 220px;
+    width: 308px;
+    margin-top: -109px;
+    margin-right: 169px;
+
+}
