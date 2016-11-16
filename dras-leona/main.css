@@ -1,6 +1,11 @@
-tr {
+.table>tbody>tr {
 	display: table-cell;
 }
+
+.table>tbody>tr>td {
+	border-top: none;
+}
+
 .map-style{
 	width: 400px; 
 	height: 200px;
