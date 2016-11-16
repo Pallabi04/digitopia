@@ -1,3 +1,7 @@
 tr {
 	display: table-cell;
 }
+.map-style{
+	width: 400px; 
+	height: 200px;
+}

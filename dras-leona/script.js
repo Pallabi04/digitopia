@@ -174,5 +174,24 @@ packageTrackerApp.controller('MainController', ['NgTableParams', '$http', functi
             }
         }];
 
+    self.showMap = function(locations) {
+        var latlng = new google.maps.LatLng(locations.latitude, locations.longitude),
+        image = 'http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png';
+
+        var mapOptions = {
+            zoom: 12,
+            center: new google.maps.LatLng(locations.latitude, locations.longitude),
+            mapTypeId: google.maps.MapTypeId.TERRAIN
+        }
+
+        self.map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+        marker = new google.maps.Marker({
+             position: latlng,
+             map: self.map,
+             icon: image
+         });
+    }
+    
     self.tableParams = new NgTableParams({}, { dataset: data });
 }]);
