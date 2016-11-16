@@ -61,7 +61,16 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
-
+#mapModal .modal-header {
+    background-color: #F49602;
+    border-radius: 5px 5px 0 0;
+}
+#mapModal .close {
+    color: #000;
+    background: #FFF;
+    padding: 0 5px;
+    border-radius: 50%;
+}
 .panel-footer .label {
     padding: 5px 10px;
     cursor: pointer;
