@@ -82,7 +82,7 @@
 .parcel-content .color {   
     height: 20px;
     border-radius: 10px;
-    
+    border: 2px solid #000;
 }
 .color, .price, .quantity {
     margin-right: 5px;
