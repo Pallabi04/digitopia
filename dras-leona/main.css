@@ -71,10 +71,33 @@
     padding: 0 5px;
     border-radius: 50%;
 }
+.parcel-content .panel-body {
+    color: #000;
+    padding: 20px 5px;
+}
+.parcel-content .panel-body .glyphicon {
+    margin-right: 5px;
+}
+.parcel-content .color {   
+    height: 20px;
+    border-radius: 10px;
+    
+}
+.color, .price, .quantity {
+    margin-right: 5px;
+    width: 30px;
+    display: block;
+    float: left;
+    text-align: center;
+}
 .panel-footer .label {
     padding: 5px 10px;
     cursor: pointer;
 }
 .panel-footer .glyphicon {
     display: inline;
+}
+.nopadding {
+    padding: 0;
+    margin: 0;
 }

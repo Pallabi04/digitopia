@@ -6,6 +6,8 @@ packageTrackerApp.controller('MainController', ['NgTableParams', '$http', functi
     //     .then(function(response) {
     //         var data = response.data.parcels;
     //     });
+    self.hideImage = true;
+    self.showMoreContent = false;
 
     self.parcels = [{
         "name": "Airwick Aroma Oil",
@@ -174,7 +176,12 @@ packageTrackerApp.controller('MainController', ['NgTableParams', '$http', functi
         }
     }];
 
- 
+    self.showMore = function() {
+        self.showMoreContent = true;
+        //self.hideImage = false;
+
+        
+    }
 
     self.showMap = function(locations) {
         var latlng = new google.maps.LatLng(locations.latitude, locations.longitude),
