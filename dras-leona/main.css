@@ -79,6 +79,9 @@
 .parcel-content .panel-body .glyphicon {
     margin-right: 5px;
 }
+.parcel-content .panel-footer {
+    padding: 10px 0px;
+}
 .parcel-content .color {   
     height: 20px;
     border-radius: 10px;
@@ -90,6 +93,9 @@
     display: block;
     float: left;
     text-align: center;
+}
+.panel-row span {
+    text-transform: capitalize;
 }
 .panel-footer .label {
     padding: 5px 10px;
