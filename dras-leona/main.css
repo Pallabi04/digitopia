@@ -108,3 +108,6 @@
 .hideImage, .hideContent {
     display: none;
 }
+.panel-row {
+    padding: 5px 0;
+}
