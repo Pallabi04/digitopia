@@ -176,11 +176,18 @@ packageTrackerApp.controller('MainController', ['NgTableParams', '$http', functi
         }
     }];
 
-    self.showMore = function() {
-        self.showMoreContent = true;
-        //self.hideImage = false;
+    self.showMore = function(event) {
+        if(angular.element(event.target).parentsUntil(angular.element("panel-info"), '.panel').find('img').hasClass('showImage')) {
+            angular.element(event.target).find('.glyphicon-chevron-up').addClass('glyphicon-chevron-down').removeClass('glyphicon-chevron-up');
+            angular.element(event.target).parentsUntil(angular.element("panel-info"), '.panel').find('img').addClass('hideImage').removeClass('showImage');
+            angular.element(event.target).parentsUntil(angular.element("panel-info"), '.panel').find('.hideContent').addClass('showContent').removeClass('hideContent');
+        } else {
+            angular.element(event.target).find('.glyphicon-chevron-down').addClass('glyphicon-chevron-up').removeClass('glyphicon-chevron-down');
+            angular.element(event.target).parentsUntil(angular.element("panel-info"), '.panel').find('img').addClass('showImage').removeClass('hideImage');
+            angular.element(event.target).parentsUntil(angular.element("panel-info"), '.panel').find('.showContent').addClass('hideContent').removeClass('showContent');
 
-        
+        }
+
     }
 
     self.showMap = function(locations) {

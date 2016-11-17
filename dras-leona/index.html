@@ -47,8 +47,8 @@
                         <div class="panel panel-info">
                             <div class="panel-heading" title="{{parcel.name}}">{{parcel.name}}</div>
                             <div class="panel-body">
-                                <img ng-show="!vm.showMoreContent"ng-src="{{parcel.image}}" width="50%" height="50%">
-                                <div ng-show="vm.showMoreContent">
+                                <img class="showImage" ng-src="{{parcel.image}}" width="50%">
+                                <div class="hideContent">
                                     <div class="col-md-6 nopadding">
                                         <div><i class="glyphicon glyphicon-shopping-cart"></i><span>{{parcel.type}}</span></div>
                                         <div><i class="glyphicon glyphicon-align-justify"></i><span>{{parcel.weight}}</span></div>
@@ -68,7 +68,7 @@
                                         <span class="label label-primary" ng-click="vm.showMap(parcel.live_location)" data-toggle="modal" data-target="#mapModal">Show Map</span>
                                     </div>
                                     <div class="col-md-6">
-                                        <span class="label label-warning" ng-click="vm.showMore()">More Details <i class="glyphicon glyphicon-chevron-up"></i></span>
+                                        <span class="label label-warning" ng-click="vm.showMore($event)">More Details <i class="glyphicon glyphicon-chevron-up"></i></span>
                                     </div>
                                 </div>
                             </div>
