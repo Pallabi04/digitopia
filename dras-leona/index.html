@@ -19,21 +19,24 @@
     <div class="main-container">
         <div class="container">
             <div class="row top-header">
-                <div class="col-md-2 col-xs-4">
+                <div class="col-md-1 col-xs-4">
                     <img src="track_img.jpg" class="image-class">
                 </div>
-                <div class="col-md-10 col-xs-8">
+                <div class="col-md-10 col-xs-8 header-title">
                     <h2>Track a Parcel</h2>
                 </div>
             </div>
             <div class="row page-content">
                 <div ng-controller="MainController as vm">
                     <div class="col-md-2">
-                        <ul class="nav nav-pills nav-stacked">
-                            <li><a href="#">Household</a></li>
-                            <li><a href="#">Fragrances</a></li>
-                            <li><a href="#">Electronics</a></li>
-                        </ul>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading"> Category</div>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="#" ng-click="vm.searchExpression='Household'">Household</a></li>
+                                <li><a href="#" ng-click="vm.searchExpression='Fragrances'">Fragrances</a></li>
+                                <li><a href="#" ng-click="vm.searchExpression='Electronics'">Electronics</a></li>
+                            </ul>
+                        </div>
                         <div class="form-group input-group">
                             <span class="input-group-addon" id="basic-addon1">Sort By</span>
                             <select class="form-control" ng-model="vm.sortExpression">
@@ -43,9 +46,13 @@
                                 <option style="display:none" value="">select</option>
                             </select>
                         </div>
+                        <div class="form-group input-group">
+                            <span class="input-group-addon" id="basic-addon1">Search</span>
+                            <input class="form-control" ng-model="vm.searchExpression" />
+                        </div>
                     </div>
                     <div class="col-md-10 parcel-content">
-                        <div ng-repeat="parcel in vm.parcels  | orderBy: vm.mySortFunction " class="col-md-3">
+                        <div ng-repeat="parcel in vm.parcels  | orderBy: vm.mySortFunction | filter: vm.searchExpression" class="col-md-3">
                             <div class="panel panel-info">
                                 <div class="panel-heading" title="{{parcel.name}}">{{parcel.name}}</div>
                                 <div class="panel-body">
@@ -79,7 +86,7 @@
                 </div>
             </div>
         </div>
-        <!-- Modal -->
+        <!--   Modal -->
         <div id="mapModal" class="modal fade" data-backdrop="static" role="dialog">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -92,7 +99,7 @@
                 </div>
             </div>
         </div>
-        </div>
+    </div>
 </body>
 <script type="text/javascript">
 $(function() {

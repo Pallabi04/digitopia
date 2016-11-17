@@ -14,6 +14,7 @@
 .main-container {
     width: 100%;
     padding: 25px;
+    min-height: 950px;
     background-color: #F49602;
     color: #FFFFFF;
     position: relative;
@@ -24,36 +25,27 @@
 .page-content {
     background-color: #FFFFFF;
     border-radius: 20px;
-}
-
-.parcel-content {
-    padding: 20px 0;
+    padding: 20px 0 0 20px;
+    min-height: 600px;
 }
 
 .image-class {
-  	height: 140px;
-    width: 160px;
-    border-radius: 100px;
-    border: 3px solid #D7D7D7;
-    z-index: -1;
-    background-image: url("header-bg.png");
+  	height: 100px;
+    width: 120px;
+    border-radius: 50%;
+    border: 2px solid #D7D7D7;
 }
 h2 {	
 	text-align: left;
-	font-size: 50px;
+	font-size: 40px;
 	padding: 10px;   
 }
 .top-header {
 	margin-bottom: 20px;
 }
-.image-class-right{
-	float: right;
-    height: 220px;
-    width: 308px;
-    margin-top: -109px;
-    margin-right: 169px;
+.header-title{
+    margin-left: 30px;
 }
-
 .panel-heading {
     white-space: nowrap;
     overflow: hidden;
@@ -69,10 +61,20 @@ h2 {
     padding: 0 5px;
     border-radius: 50%;
 }
+
+.panel-primary {
+    border-color: #F49602; 
+}
+
+.panel-primary>.panel-heading {
+    background-color: #F49602; 
+    border-color: #F49602; 
+}
+
 .parcel-content .panel-body {
     color: #000;
     padding: 20px 5px;
-    min-height: 150px;
+    min-height: 165px;
 }
 .parcel-content .panel-body .glyphicon {
     margin-right: 5px;
@@ -126,9 +128,7 @@ h2 {
 	    width: 130px;
 	}
     h2 {	
-		text-align: left;
-		font-size: 36px;
-		padding: 20px 0;   
+		display: none;
 	}
 	.top-header {
 		margin-bottom: 10px;
