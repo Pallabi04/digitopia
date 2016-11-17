@@ -195,8 +195,8 @@ packageTrackerApp.controller('MainController', ['NgTableParams', '$http', functi
             image = 'http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png';
 
         var mapOptions = {
-            zoom: 12,
-            center: new google.maps.LatLng(locations.latitude+0.05, locations.longitude-0.09),
+            zoom: 15,
+            center: new google.maps.LatLng(locations.latitude+0.005, locations.longitude-0.0125),
             mapTypeId: google.maps.MapTypeId.TERRAIN
         }
 
