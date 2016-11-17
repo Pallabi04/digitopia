@@ -201,5 +201,10 @@ packageTrackerApp.controller('MainController', ['NgTableParams', '$http', functi
             icon: image
         });
     }
+    self.mySortFunction = function(item) {
+        if(isNaN(item[self.sortExpression]))
+            return item[self.sortExpression];
+        return parseInt(item[self.sortExpression]);
+    }
 
 }]);

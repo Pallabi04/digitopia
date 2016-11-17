@@ -35,15 +35,15 @@
 
                     <div class="form-group input-group">
                         <span class="input-group-addon" id="basic-addon1">Sort By</span>
-                        <select class="form-control">
-                            <option>Price</option>
-                            <option>Value</option>
-                            <option>Weight</option>
+                        <select class="form-control" ng-model="vm.sortExpression">
+                            <option>name</option>
+                            <option>weight</option>
+                            <option>price</option>
                         </select>
                     </div>
                 </div>
                 <div class="col-md-10 parcel-content">
-                    <div ng-repeat="parcel in vm.parcels" class="col-md-3">
+                    <div ng-repeat="parcel in vm.parcels  | orderBy: vm.mySortFunction " class="col-md-3">
                         <div class="panel panel-info">
                             <div class="panel-heading" title="{{parcel.name}}">{{parcel.name}}</div>
                             <div class="panel-body">
